@@ -1,0 +1,21 @@
+<launch>
+    <arg name="left_img_topic" default="/kitti/camera_color_left/image_raw"/>
+    <arg name="right_img_topic" default="/kitti/camera_color_right/image_raw"/>
+    <arg name="semseg_img_topic" default="/semantic_segmentation"/>
+
+    <arg name="output_disp_topic" default="/aanet/disparity_map"/>
+    <arg name="output_pc_topic" default="/aanet/point_cloud"/>
+
+    <arg name="num_lidar_rays" default="64"/>
+    <arg name="max_allowed_proc_delay" default="0.2"/>
+
+    <node pkg="aanet_ros" type="aanet_ros.py" name="aanet_ros" output="screen">
+        <param name="left_img_topic" value="$(arg left_img_topic)"/>
+        <param name="right_img_topic" value="$(arg right_img_topic)"/>
+        <param name="semseg_img_topic" value="$(arg semseg_img_topic)"/>
+        <param name="output_disp_topic" value="$(arg output_disp_topic)"/>
+        <param name="output_pc_topic" value="$(arg output_pc_topic)"/>
+        <param name="num_lidar_rays" value="$(arg num_lidar_rays)"/>
+        <param name="max_allowed_proc_delay" value="$(arg max_allowed_proc_delay)"/>
+    </node>
+</launch>
