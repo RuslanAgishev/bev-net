@@ -1,4 +1,4 @@
-# Lift, Splat, Shoot ([LSS](https://gitlab.com/vedu/bev-net/-/blob/master/lift-splat-shoot/LSS.md))
+# Lift, Splat, Shoot ([LSS](./lift-splat-shoot/LSS.md))
 
 Notes on how to train LSS model on different datasets and run on custom data.
 
@@ -8,13 +8,13 @@ Notes on how to train LSS model on different datasets and run on custom data.
 
     Download nuscenes data from [https://www.nuscenes.org/](https://www.nuscenes.org/). Install dependencies.
 
-    Change `dataroot` path in [./configs/nuscenes_config.yaml](https://gitlab.com/vedu/bev-net/-/blob/master/lift-splat-shoot/configs/nuscenes_config.yaml)
+    Change `dataroot` path in [./configs/nuscenes_config.yaml](./lift-splat-shoot/configs/nuscenes_config.yaml)
 
 - KITTI-360
     
     Download KITTI360 data from [http://www.cvlibs.net/datasets/kitti-360/index.php](http://www.cvlibs.net/datasets/kitti-360/index.php).
 
-    Change `dataroot` path in [./configs/kitti360_config.yaml](https://gitlab.com/vedu/bev-net/-/blob/master/lift-splat-shoot/configs/kitti360_config.yaml)
+    Change `dataroot` path in [./configs/kitti360_config.yaml](./lift-splat-shoot/configs/kitti360_config.yaml)
 
 
 ## Pre-trained Models
@@ -42,13 +42,13 @@ Model: [weights and config](https://files.sberdisk.ru/s/aG8ktnEmPg76pm5).
 
 ## Explore Input/Output Data
 
-Take a look at the [./notebooks](https://gitlab.com/vedu/bev-net/-/tree/master/lift-splat-shoot/notebooks)
+Take a look at the [./notebooks](./lift-splat-shoot/notebooks)
 folder for tutorials how to prepare the data for model training:
-- [Nuscenes](https://gitlab.com/vedu/bev-net/-/blob/master/lift-splat-shoot/notebooks/example_mono.ipynb):
+- [Nuscenes](./lift-splat-shoot/notebooks/example_mono.ipynb):
     local map prediction from single camera input (image, extrinsics, intrinsics).
-- [KITTI360](https://gitlab.com/vedu/bev-net/-/blob/master/lift-splat-shoot/notebooks/explore_kitti360_bev_maps.ipynb):
+- [KITTI360](./lift-splat-shoot/notebooks/explore_kitti360_bev_maps.ipynb):
     local map prediction from stereo-camera input (left and right image, extrinsics, intrinsics).
-- [Discriminator](https://gitlab.com/vedu/bev-net/-/blob/master/lift-splat-shoot/notebooks/discriminator.ipynb):
+- [Discriminator](./lift-splat-shoot/notebooks/discriminator.ipynb):
     training LSS model with discriminator for output layout correction, based on Open Street Maps or nuscenes data.
 
 ## Semantic Mapping (ROS)
@@ -78,7 +78,7 @@ LSS semantic mapping with stereo input. In this demo, on the top are left and ri
 on the bottom right is the local map prediction by LSS model in the left camera field of view,
 on the bottom left is the resultant global map. It is obtained by combining and filtering the sequence
 of local map predictions with the help of
-[ORB_SLAM3](https://gitlab.com/vedu/bev-net/-/tree/master/motionnet-odom/thirdparty/ORB_SLAM3) odometry.
+[ORB_SLAM3](./motionnet-odom/thirdparty/ORB_SLAM3) odometry.
 
 <img src="./imgs/gt_odom_lss_stereo_mapping.gif">
 
