@@ -1,0 +1,20 @@
+<launch>
+	<arg name="pointcloud_topic" default="/velodyne_points"/>
+	<arg name="odom_topic" default="/odom"/>
+	<arg name="rviz" default="false" />
+	<arg name="rviz_configs" default="motionnet" />
+	<arg name="plt_visualization" default="true" />
+	<arg name="publish_synch_pcs" default="true" />
+
+	<!-- MotionNet -->
+	<node pkg="motionnet_ros" type="motionnet.py" name="motionnet" output="screen">
+		<param name="pointcloud_topic" value="$(arg pointcloud_topic)"/>
+		<param name="odom_topic" value="$(arg odom_topic)"/>
+		<param name="plt_visualization" value="$(arg plt_visualization)"/>
+		<param name="publish_synch_pcs" value="$(arg publish_synch_pcs)"/>
+	</node>
+
+    <group if="$(arg rviz)">
+        <node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find motionnet_ros)/configs/$(arg rviz_configs).rviz" />
+    </group>
+</launch>

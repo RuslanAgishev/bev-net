@@ -1,0 +1,174 @@
+
+# Created by https://www.gitignore.io/api/python
+# Edit at https://www.gitignore.io/?templates=python
+
+### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# pyenv
+.python-version
+
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
+
+# celery beat schedule file
+celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# End of https://www.gitignore.io/api/python
+.ipynb_checkpoints/
+
+# LSS
+runs/
+lift-splat-shoot/.idea/
+lift-splat-shoot/results/
+lift-splat-shoot/weights/
+
+# Monolayout
+monolayout/models/
+monolayout/pretrained_models/
+
+# Large files
+*.avi
+*.mp4
+*.h5
+*.pth
+*.ckpt
+*.zip
+*.pb
+*.trt
+*.onnx
+*.pkl
+
+# data
+motionnet-odom/data/nuScenes_preprocessed
+motionnet-odom/test/
+motionnet-odom/logs/
+motionnet-odom/thirdparty/aanet/output/
+motionnet-odom/thirdparty/aanet/nets/deform_conv/build
+
+
+# ROS
+devel/
+build/
+.catkin_workspace
+.catkin_tools
+*.bag
+
+# ORB_SLAM2
+motionnet-odom/thirdparty/ORB_SLAM2/CMakeLists.txt.user
+motionnet-odom/thirdparty/ORB_SLAM2/Examples/Monocular/mono_euroc
+motionnet-odom/thirdparty/ORB_SLAM2/Examples/Monocular/mono_kitti
+motionnet-odom/thirdparty/ORB_SLAM2/Examples/Monocular/mono_tum
+motionnet-odom/thirdparty/ORB_SLAM2/Examples/RGB-D/rgbd_tum
+motionnet-odom/thirdparty/ORB_SLAM2/Examples/ROS/ORB_SLAM2/CMakeLists.txt.user
+motionnet-odom/thirdparty/ORB_SLAM2/Examples/ROS/ORB_SLAM2/Mono
+motionnet-odom/thirdparty/ORB_SLAM2/Examples/ROS/ORB_SLAM2/MonoAR
+motionnet-odom/thirdparty/ORB_SLAM2/Examples/ROS/ORB_SLAM2/RGBD
+motionnet-odom/thirdparty/ORB_SLAM2/Examples/ROS/ORB_SLAM2/Stereo
+motionnet-odom/thirdparty/ORB_SLAM2/Examples/ROS/ORB_SLAM2/build/
+motionnet-odom/thirdparty/ORB_SLAM2/Examples/Stereo/stereo_euroc
+motionnet-odom/thirdparty/ORB_SLAM2/Examples/Stereo/stereo_kitti
+motionnet-odom/thirdparty/ORB_SLAM2/KeyFrameTrajectory.txt
+motionnet-odom/thirdparty/ORB_SLAM2/Thirdparty/DBoW2/build/
+motionnet-odom/thirdparty/ORB_SLAM2/Thirdparty/DBoW2/lib/
+motionnet-odom/thirdparty/ORB_SLAM2/Thirdparty/g2o/build/
+motionnet-odom/thirdparty/ORB_SLAM2/Thirdparty/g2o/config.h
+motionnet-odom/thirdparty/ORB_SLAM2/Thirdparty/g2o/lib/
+motionnet-odom/thirdparty/ORB_SLAM2/Vocabulary/ORBvoc.txt
+motionnet-odom/thirdparty/ORB_SLAM2/build/
+*~
+motionnet-odom/thirdparty/ORB_SLAM2/lib/
+motionnet-odom/thirdparty/ORB_SLAM2/Thirdparty/Pangolin/

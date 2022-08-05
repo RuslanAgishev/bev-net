@@ -1,0 +1,35 @@
+DATA:
+    version: 'mini'
+    dataroot: '/home/ruslan/datasets/nuscenes'
+
+    H: 900
+    W: 1600
+    resize_lim: [0.325, 0.583]
+    final_dim: [512, 512]
+    bot_pct_lim: [0.0, 0.22]
+    rot_lim: [-5.4, 5.4]
+    rand_flip: False
+    ncams: 1
+    cams: ['CAM_FRONT']
+
+    xbound: [0.0, 32.0, 0.25]
+    ybound: [-16.0, 16.0, 0.25]
+    zbound: [-10.0, 10.0, 20.0]
+    dbound: [4.0, 45.0, 1.0]
+
+TRAIN:
+    data_path: './data'  # Path to the root data directory
+    static_weight: 5.0  # static weight for calculating loss
+    dynamic_weight: 15.0  # dynamic weight for calculating loss
+    type: 'dynamic'  #  Type of model being trained, one of: "both", "static", "dynamic"
+    lr: 0.00001  # learning rate
+    scheduler_step_size: 5  # step size for the both schedulers
+    batch_size: 16  # Mini-Batch size
+    num_workers: 12  # Number of cpu workers for dataloaders
+    load_weights_folder: ""  # Path to a pretrained model used for initialization
+    num_epochs: 20  # 100
+    log_frequency: 5  # Log files every x epochs
+    model_name: "monolayout"  # Model Name with specifications
+    discr_train_epoch: 2  # epoch to start training discriminator
+    lambda_D: 0.01  # tradeoff weight for discriminator loss
+    osm_path: './data/osm'  # Open Street Maps path

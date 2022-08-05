@@ -1,0 +1,62 @@
+# Large files
+*.avi
+*.mp4
+*.h5
+*.pth
+*.ckpt
+*.zip
+*.pb
+*.trt
+*.onnx
+*.pkl
+
+# data
+data/nuScenes_preprocessed
+test/
+logs/
+thirdparty/aanet/output/
+
+# Byte-compiled / optimized / DLL files
+__pycache__
+*.py[cod]
+*$py.class
+.idea/
+logs
+*.cache
+*.pyc
+.vscode/
+.ipynb_checkpoints
+thirdparty/aanet/nets/deform_conv/build
+
+# ROS
+devel/
+build/
+.catkin_workspace
+.catkin_tools
+*.bag
+
+# ORB_SLAM2
+thirdparty/ORB_SLAM2/CMakeLists.txt.user
+thirdparty/ORB_SLAM2/Examples/Monocular/mono_euroc
+thirdparty/ORB_SLAM2/Examples/Monocular/mono_kitti
+thirdparty/ORB_SLAM2/Examples/Monocular/mono_tum
+thirdparty/ORB_SLAM2/Examples/RGB-D/rgbd_tum
+thirdparty/ORB_SLAM2/Examples/ROS/ORB_SLAM2/CMakeLists.txt.user
+thirdparty/ORB_SLAM2/Examples/ROS/ORB_SLAM2/Mono
+thirdparty/ORB_SLAM2/Examples/ROS/ORB_SLAM2/MonoAR
+thirdparty/ORB_SLAM2/Examples/ROS/ORB_SLAM2/RGBD
+thirdparty/ORB_SLAM2/Examples/ROS/ORB_SLAM2/Stereo
+thirdparty/ORB_SLAM2/Examples/ROS/ORB_SLAM2/build/
+thirdparty/ORB_SLAM2/Examples/Stereo/stereo_euroc
+thirdparty/ORB_SLAM2/Examples/Stereo/stereo_kitti
+thirdparty/ORB_SLAM2/KeyFrameTrajectory.txt
+thirdparty/ORB_SLAM2/Thirdparty/DBoW2/build/
+thirdparty/ORB_SLAM2/Thirdparty/DBoW2/lib/
+thirdparty/ORB_SLAM2/Thirdparty/g2o/build/
+thirdparty/ORB_SLAM2/Thirdparty/g2o/config.h
+thirdparty/ORB_SLAM2/Thirdparty/g2o/lib/
+thirdparty/ORB_SLAM2/Vocabulary/ORBvoc.txt
+thirdparty/ORB_SLAM2/build/
+*~
+thirdparty/ORB_SLAM2/lib/
+thirdparty/ORB_SLAM2/Thirdparty/Pangolin/

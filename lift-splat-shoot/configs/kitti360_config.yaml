@@ -1,0 +1,51 @@
+DATA:
+    dataroot: '/home/ruslan/datasets/KITTI-360/'
+    osm_path: '../monolayout/data/osm/'  # Open Street Maps path
+    train_seqs: [
+#                '2013_05_28_drive_0000_sync',
+                 '2013_05_28_drive_0003_sync',
+#               '2013_05_28_drive_0005_sync',
+#               '2013_05_28_drive_0006_sync',
+#               '2013_05_28_drive_0007_sync',
+#               '2013_05_28_drive_0009_sync',
+#               '2013_05_28_drive_0010_sync',
+                ]
+    val_seqs: ['2013_05_28_drive_0004_sync',]
+
+    H: 376
+    W: 1408
+    resize_lim: [0.7, 0.8]
+    final_dim: [256, 704]
+    bot_pct_lim: [0.0, 0.22]
+    rot_lim: [-5.4, 5.4]
+    rand_flip: False
+    ncams: 2
+    cams: ['image_00', 'image_01']  # image_00 corresponds to LEFT camera, image_01 is a RIGHT camera view
+    classes: ["road", "car"]
+    pretrained_weights_path: './weights/road_cars_kitti360/model_iou_0.47.pt'
+
+    xbound: [ 0.0, 40.96, 0.16 ]
+    ybound: [ -20.48, 20.48, 0.16 ]
+    zbound: [ -10.0, 10.0, 20.0 ]
+    dbound: [ 4.0, 45.0, 1.0 ]
+
+#    xbound: [0.0, 69.12, 0.16]
+#    ybound: [-39.68, 39.68, 0.16]
+#    zbound: [-10.0, 10.0, 20.0]
+#    dbound: [4.0, 45.0, 1.0]
+
+TRAIN:
+    lr: 0.001  # model learning rate
+    weight_decay: 0.0000001  # weights decay hyperparameter
+    pos_weight: 2.13
+    max_grad_norm: 5
+    batch_size: 1  # Mini-Batch size
+    num_workers: 12  # Number of cpu workers for dataloaders
+    num_epochs: 10  # 10000
+    gpuid: 0  # GPU id
+    model_name: "lss_kitti360"  # Model Name with specifications
+    discr_start_train_epoch: 0  # epoch to start training discriminator
+    lr_D: 0.001  # discriminator learning rate
+    static_weight_D: 0.2  # static layout weight for discriminator loss
+    dynamic_weight_D: 0.8  # dynamic layout weight for discriminator loss
+    lambda_D: 0.01  # tradeoff weight for discriminator loss

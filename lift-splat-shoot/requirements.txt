@@ -1,0 +1,14 @@
+opencv_python==4.4.0.44
+efficientnet_pytorch==0.6.1
+fire==0.2.1
+torch==1.7.0
+matplotlib==3.1.1
+pyquaternion==0.9.5
+torchvision==0.8.1
+nuscenes_devkit==1.1.0
+numpy==1.17.0
+tqdm==4.41.1
+Pillow==8.0.1
+PyYAML==5.3.1
+tensorboardX==2.1
+tf==1.0.0
